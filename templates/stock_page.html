@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Inventory</title>
+</head>
+<body>
+    <h1>Stock Inventory</h1>
+    
+    <!-- Add Item Button -->
+    <a href="{% url 'add_item' %}" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 4px;">Add New Item</a>
+
+
+    <table border="1" style="margin-top: 20px;">
+        <tr>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td>{{ item.item_name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{% url 'sell_item' %}" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 4px;">Sell Item</a>
+</body>
+</html>
