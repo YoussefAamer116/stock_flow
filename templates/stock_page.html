@@ -7,7 +7,7 @@
     <h1>Stock Inventory</h1>
     
     <!-- Add Item Button -->
-    <a href="{% url 'add_item' %}" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 4px;">Add New Item</a>
+    
 
 
     <table border="1" style="margin-top: 20px;">
@@ -25,6 +25,8 @@
         {% endfor %}
     </table>
     <br>
+    <a href="{% url 'add_item' %}" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 4px;">Add New Item</a>
     <a href="{% url 'sell_item' %}" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 4px;">Sell Item</a>
+    <a href="{% url 'sales_report' %}" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 4px;">Sales Report</a>
 </body>
 </html>

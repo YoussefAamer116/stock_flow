@@ -7,7 +7,7 @@ class Sale(models.Model):
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
     quantity_sold = models.IntegerField()
     sale_date = models.DateTimeField(auto_now_add=True)
-    total_revenue = models.DecimalField(max_digits=10, decimal_places=2)
+    total_revenue = models.DecimalField(max_digits=100, decimal_places=2)
 
     def save(self, *args, **kwargs):
         # Ensure that the quantity sold is positive

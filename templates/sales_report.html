@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Report</title>
+</head>
+<body>
+    <h1>Sales Report</h1>
+    <p>Report generated on: {{ current_datetime }}</p>
+    <table>
+        <tr>
+            <th>Item Name</th>
+            <th>Quantity Sold</th>
+            <th>Total Revenue</th>
+        </tr>
+        {% for sale in sales %}
+        <tr>
+            <td>{{ sale.item.item_name }}</td>
+            <td>{{ sale.quantity_sold }}</td>
+            <td>{{ sale.total_revenue }}</td>
+            <td>{{ sale.sale_date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
