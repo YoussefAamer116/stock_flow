@@ -12,7 +12,7 @@
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/stock_flow.git
+   git clone https://github.com/YoussefAamer116/stock_flow.git
    ```
 2. **Navigate to the Project Directory:**
    ```bash
@@ -20,21 +20,28 @@
    ```
 3. **Create a Virtual Environment:**
    ```bash
-   python3 -m venv env
+   python3 -m venv venv
    ```
 4. **Activate the Virtual Environment:**
    - On macOS/Linux:
      ```bash
-     source env/bin/activate
+     source venv/bin/activate
      ```
-   - On Windows:
-     ```bash
-     .\env\Scriptsctivate
-     ```
+   
 5. **Install Dependencies:**
    ```bash
    pip install -r requirements.txt
+
+6. **Create a .env File:**
+   Create a .env file in the project root directory and add the following environment variables:
    ```
+   SECRET_KEY
+   DATABASE_NAME
+   DATABASE_USER
+   DATABASE_PASSWORD
+   DATABASE_HOST
+   DATABASE_PORT
+
 6. **Run Migrations:**
    ```bash
    python manage.py makemigrations
@@ -54,7 +61,7 @@
 ## Dependencies
 
 - Django
-- WeasyPrint (or other PDF generation package like xhtml2pdf)
+- WeasyPrint 
 
 Install all dependencies listed in `requirements.txt`.
 
